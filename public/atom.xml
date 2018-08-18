@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-01-26T05:41:15.939Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Luo</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Beautify your github pages with Hexo</title>
+    <link href="http://yoursite.com/2018/01/25/Hexo/hexo-github-page/"/>
+    <id>http://yoursite.com/2018/01/25/Hexo/hexo-github-page/</id>
+    <published>2018-01-25T12:48:39.000Z</published>
+    <updated>2018-01-26T05:41:15.939Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>Install local git</strong></p><p><strong>Install node.js</strong></p><h2 id="Create-github-pages"><a href="#Create-github-pages" class="headerlink" title="Create github pages"></a>Create github pages</h2><ul><li>Apply a github account</li><li>Create a repository, name: [yourGithubAccount].github.io</li><li><p>Generate github public ssh key with git bash</p>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure></li><li><p>Set global config</p>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"[yourName]"</span>//account</span><br><span class="line">$ git config --global user.email  <span class="string">"[yourEmail]"</span>//Email</span><br></pre></td></tr></table></figure></li></ul><hr><h2 id="Install-and-Config-Hexo"><a href="#Install-and-Config-Hexo" class="headerlink" title="Install and Config Hexo"></a>Install and Config Hexo</h2><h4 id="create-an-empty-diretory-and-run"><a href="#create-an-empty-diretory-and-run" class="headerlink" title="create an empty diretory and run"></a>create an empty diretory and run</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br><span class="line">$ npm install hexo --save</span><br><span class="line">$ hexo init</span><br></pre></td></tr></table></figure><hr><h4 id="some-plugins"><a href="#some-plugins" class="headerlink" title="some plugins"></a>some plugins</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-archive --save</span><br><span class="line">npm install hexo-generator-category --save</span><br><span class="line">npm install hexo-generator-tag --save</span><br><span class="line">npm install hexo-server --save</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-deployer-heroku --save</span><br><span class="line">npm install hexo-deployer-rsync --save</span><br><span class="line">npm install hexo-deployer-openshift --save</span><br><span class="line">npm install hexo-renderer-marked@0.2 --save</span><br><span class="line">npm install hexo-renderer-stylus@0.2 --save</span><br><span class="line">npm install hexo-generator-feed@1 --save</span><br><span class="line">npm install hexo-generator-sitemap@1 --save</span><br></pre></td></tr></table></figure><hr><h4 id="Success"><a href="#Success" class="headerlink" title="Success"></a>Success</h4><ul><li><p>generate public diretory</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure></li><li><p>run on local</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></li></ul><hr><h4 id="Config-on-config-yml"><a href="#Config-on-config-yml" class="headerlink" title="Config on _config.yml"></a>Config on <code>_config.yml</code></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:[yourGithubAccount]/[yourGithubAccount].github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><hr><h4 id="some-command"><a href="#some-command" class="headerlink" title="some command"></a>some command</h4><ul><li><code>hexo new &quot;title&quot;</code> post article</li><li><code>hexo g</code> generate</li><li><code>hexo d</code> deploy to git</li><li><code>hexo clean</code></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;Install local git&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Install node.js&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Create-github-pages&quot;&gt;&lt;a href=&quot;#Create-github-pages
+      
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2018/01/25/Hexo/hello-world/"/>
+    <id>http://yoursite.com/2018/01/25/Hexo/hello-world/</id>
+    <published>2018-01-25T03:57:45.933Z</published>
+    <updated>2018-01-26T01:11:14.244Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+  </entry>
+  
+</feed>
